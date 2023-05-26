@@ -1,51 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/config.css">
-    <script src="./js/main.js"></script>
-
+  <title>Caja que abarca toda la página</title>
+  <link rel="stylesheet" type="text/css" href="./css/index.css">
+  <link rel="stylesheet" href="./css/config.css">
 </head>
 <body>
+
+  <div class="caja">
+    
+      <div class="dropdown">
+        <button onclick="toggleDropdown()" class="dropbtn">Menú ☰</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#">Muebles/Cocina</a>
+            <a href="#">Muebles/Comedor</a>
+            <a href="#">Muebles/Sala</a>
+            <a href="#">Muebles/Baño</a>
+        </div>
+      </div>
     
     <h1 class="titulo"> Muebles shop</h1>
+    <h1 class="lupa"> 🔍</h1>
+    <button class="ofertas">Ofertas</button>
+    <button class="registrarse">Registrarse</button>
+    <input class="buscartx" type="text">
+  </div>
 
-    <div class="caja1">
-    <button class="menu">☰</button>
-    <button class="ofertas">texto</button>
-    <button class="registrarse">texto</button>
-    <button class="buscador">🔍</button>
-    <input class="buscadort" type="">
-    </div>
 
-    <div class="caja2">
+  <div class="slider">
+
+    <img id="miImagen" src="https://cardsimages.info-tuparada.com/3871/71192-2-juan-pablo.png" alt="Mi imagen">
+  
+  </div>
+
+  <div class="caja2">
     <h1 class="principal">Producto</h1>
-    <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus culpa, ipsa reiciendis quia aperiam nisi nobis non eaque, expedita ipsam enim laudantium illo provident similique vero, iure maiores voluptate! Harum!</p>
-    <img class="img1" src="https://i.ytimg.com/vi/4PqiAjZsR7Y/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGDMgZSgoMA8=&rs=AOn4CLCzYDdcn9Ln7SoY2SPAe9fqoGStNQ" alt="">
+    <p class="info">Informacion de manera resumida del Producto</p>
+    <img class="img1" src="https://www.mueblesbonitos.com/media/social_muebles_bonitos.jpg" alt="">
     <button class="comprar1">comprar</button>
-    </div>
-
-    <div class="caja3">
-        <h1 class="galeria">productos</h1>
-        <img class="gal1" src="https://cdn-icons-png.flaticon.com/512/0/8.png" alt="">
-        <img class="gal2" src="https://cdn-icons-png.flaticon.com/512/0/8.png" alt="">
-        <img class="gal3" src="https://cdn-icons-png.flaticon.com/512/0/8.png" alt="">
-
-        <button class="bt1">text</button>
-        <button class="bt2">text</button>
-        <button class="bt3">text</button>
-
-    </div>
-
-    <div class="caja4">
-        
-    </div>
+  </div>
 
 
-
+  <script src="./js/main.js"></script>
+  <script src="./js/teclas.js"></script>
 </body>
 </html>
