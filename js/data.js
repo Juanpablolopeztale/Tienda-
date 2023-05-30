@@ -1,4 +1,4 @@
-let data_todo_list = [
+let data = [
 
     {
         id : "1",
