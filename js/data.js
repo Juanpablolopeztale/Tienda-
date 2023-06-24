@@ -1,4 +1,4 @@
-let data = [
+let datas = [
 
     {
         id : "1",
@@ -68,3 +68,12 @@ let data = [
     },
  
  ];
+
+ for (let i = 0; i < data.length; i++) {
+    let item = data[i];
+    console.log("ID:", item.id);
+    console.log("Nombre:", item.Nombre);
+    console.log("Categoría:", item.Categoria);
+    console.log("Estado:", item.estado);
+    console.log("---------------------------");
+}

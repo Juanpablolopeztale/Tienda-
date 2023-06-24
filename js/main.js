@@ -32,3 +32,24 @@ function cambiarImagen() {
   window.onload = function() {
     cambiarImagen();
   };
+
+  const gridContainer = document.getElementById("grid-container");
+
+const data = [
+  "Item 1",
+  "Item 2",
+  "Item 3",
+  "Item 4",
+  "Item 5",
+  "Item 6",
+  "Item 7",
+  "Item 8",
+  "Item 9"
+];
+
+data.forEach((item) => {
+  const gridItem = document.createElement("div");
+  gridItem.classList.add("grid-item");
+  gridItem.textContent = item;
+  gridContainer.appendChild(gridItem);
+});
