@@ -115,7 +115,7 @@ font-size: 24px;
 text-decoration: none;
 margin-right: 10px;
 }
-.ofertas, .registrarse {
+.ofertas, .carrito {
 padding: 10px 20px;
 font-size: 16px;
 background-color: #4CAF50;
@@ -276,6 +276,15 @@ body.modal-open {
 .producto p {
   font-size: 14px;
   color: #666;
+}
+
+/* Estilos para la imagen pequeña */
+.img-pequena {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 50px; /* Ajusta el tamaño de la imagen pequeña según tus preferencias */
+  height: 50px; /* Ajusta el tamaño de la imagen pequeña según tus preferencias */
 }
 
 

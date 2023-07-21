@@ -131,35 +131,56 @@ let datas = [
 
 // Suponemos que el archivo main.js está en la misma carpeta que el archivo data.js
 
+
 // Iterar sobre el array datas y mostrar los productos en la página
 datas.forEach((producto) => {
-  // Crear un elemento div para representar cada producto
-  const gridItem = document.createElement("div");
-  gridItem.classList.add("grid-item");
-
-  // Agregar la imagen del producto
-  const imgProducto = document.createElement("img");
-  imgProducto.src = producto.img;
-  imgProducto.alt = producto.Nombre;
-  gridItem.appendChild(imgProducto);
-
-  // Agregar el nombre del producto
-  const nombreProducto = document.createElement("h3");
-  nombreProducto.textContent = producto.Nombre;
-  gridItem.appendChild(nombreProducto);
-
-  // Agregar la categoría del producto
-  const categoriaProducto = document.createElement("p");
-  categoriaProducto.textContent = `Categoría: ${producto.Categoria}`;
-  gridItem.appendChild(categoriaProducto);
-
-  // Agregar el producto al contenedor principal
-  const gridContainer = document.getElementById("grid-container");
-  gridContainer.appendChild(gridItem);
-});
-
-// Función para buscar producto y mostrar solo los que coincidan con el término de búsqueda
-function buscar() {
+    // Crear un elemento div para representar cada producto
+    const gridItem = document.createElement("div");
+    gridItem.classList.add("grid-item");
+  
+    // Agregar la imagen del producto
+    const imgProducto = document.createElement("img");
+    imgProducto.src = producto.img;
+    imgProducto.alt = producto.Nombre;
+    gridItem.appendChild(imgProducto);
+  
+    // Agregar la imagen pequeña en la parte inferior derecha del producto
+    const imgPequena = document.createElement("img");
+    imgPequena.src = "https://img.freepik.com/vector-premium/icono-carrito-compras-rapido_414847-513.jpg?w=2000"; // Reemplaza "ruta_de_la_imagen_pequena.png" con la ruta de tu imagen pequeña
+    imgPequena.classList.add("img-pequena");
+    gridItem.appendChild(imgPequena);
+  
+    // Agregar el nombre del producto
+    const nombreProducto = document.createElement("h3");
+    nombreProducto.textContent = producto.Nombre;
+    gridItem.appendChild(nombreProducto);
+  
+    // Agregar la categoría del producto
+    const categoriaProducto = document.createElement("p");
+    categoriaProducto.textContent = `Categoría: ${producto.Categoria}`;
+    gridItem.appendChild(categoriaProducto);
+  
+    // Agregar el producto al contenedor principal
+    const gridContainer = document.getElementById("grid-container");
+    gridContainer.appendChild(gridItem);
+  
+    // Creamos una función para agregar productos al carrito
+    const agregarAlCarrito = () => {
+      const carritoJSON = localStorage.getItem("carrito");
+      const carrito = carritoJSON ? JSON.parse(carritoJSON) : [];
+      carrito.push(producto);
+      localStorage.setItem("carrito", JSON.stringify(carrito));
+      console.log("Producto agregado al carrito:", producto.Nombre);
+      // Redirigir a la página de carrito.html
+      window.location.href = "./carrito.html";
+    };
+  
+    // Agregamos un evento de clic a la imagen pequeña para llamar a la función agregarAlCarrito
+    imgPequena.addEventListener("click", agregarAlCarrito);
+  });
+  
+  // Función para buscar producto y mostrar solo los que coincidan con el término de búsqueda
+  function buscar() {
     const inputBusqueda = document.querySelector(".buscartx");
     const terminoBusqueda = inputBusqueda.value.trim().toLowerCase();
   
@@ -211,56 +232,8 @@ function buscar() {
       gridContainer.appendChild(gridItem);
     });
   }
-
+  
   // Función para mostrar la pantalla emergente con los resultados
-function mostrarResultadosModal(resultados) {
-    const modal = document.getElementById("modal");
-    const modalResults = document.getElementById("modal-results");
-  
-    // Limpiamos los resultados anteriores
-    modalResults.innerHTML = "";
-  
-    // Mostramos los nuevos resultados
-    resultados.forEach((producto) => {
-      const productoDiv = document.createElement("div");
-      productoDiv.classList.add("producto");
-      productoDiv.innerHTML = `
-        <img src="${producto.img}" alt="${producto.Nombre}">
-        <h3>${producto.Nombre}</h3>
-        <p>Categoría: ${producto.Categoria}</p>
-      `;
-      modalResults.appendChild(productoDiv);
-    });
-  
-    // Mostramos la pantalla emergente
-    modal.style.display = "block";
-  
-    // Agregamos una clase al body para ocultar la barra de desplazamiento
-    document.body.classList.add("modal-open");
-  }
-  
-  // Función para ocultar la pantalla emergente
-  function ocultarModal() {
-    const modal = document.getElementById("modal");
-  
-    // Ocultamos la pantalla emergente
-    modal.style.display = "none";
-  
-    // Removemos la clase del body para mostrar la barra de desplazamiento nuevamente
-    document.body.classList.remove("modal-open");
-  }
-  
-  // Evento para cerrar la pantalla emergente cuando se haga clic en la 'x' (botón de cerrar)
-  document.querySelector(".close-btn").addEventListener("click", ocultarModal);
-  
-  // Evento para cerrar la pantalla emergente cuando se haga clic fuera de ella
-  window.addEventListener("click", (event) => {
-    const modal = document.getElementById("modal");
-    if (event.target === modal) {
-      ocultarModal();
-    }
-  });
-
   function mostrarResultadosModal(resultados) {
     const modal = document.getElementById("modal");
     const modalResults = document.getElementById("modal-results");
@@ -292,3 +265,22 @@ function mostrarResultadosModal(resultados) {
     // Mostramos la pantalla emergente
     modal.style.display = "block";
   }
+  
+  // Función para ocultar la pantalla emergente
+  function ocultarModal() {
+    const modal = document.getElementById("modal");
+  
+    // Ocultamos la pantalla emergente
+    modal.style.display = "none";
+  }
+  
+  // Evento para cerrar la pantalla emergente cuando se haga clic en la 'x' (botón de cerrar)
+  document.querySelector(".close-btn").addEventListener("click", ocultarModal);
+  
+  // Evento para cerrar la pantalla emergente cuando se haga clic fuera de ella
+  window.addEventListener("click", (event) => {
+    const modal = document.getElementById("modal");
+    if (event.target === modal) {
+      ocultarModal();
+    }
+  });
