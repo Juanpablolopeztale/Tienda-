@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/comedor.css">
+
+</head>
+<body>
+    <div class="caja">
+        <div class="dropdown">
+          <button onclick="toggleDropdown()" class="dropbtn">Menú ☰</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="./cocina.html">Muebles Cocina</a>
+              <a href="./Comedor.html">Muebles Comedor</a>
+              <a href="./sala.html">Muebles Sala</a>
+              <a href="./baño.html">Muebles Baño</a>
+          </div>
+        </div>
+      
+      <a href="./index.html" class="titulo">Muebles shop</a>
+      <button class="ofertas">Ofertas</button>
+      <button class="registrarse">Registrarse</button>
+      <input class="buscartx" type="text">
+    </div>
+
+    <!-- Corregimos el ID del contenedor -->
+    <div id="contenedor_comedor" class="grid-container"></div>
+
+    <script src="./js/comedor.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+/* Estilos generales */
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+/* Estilos de la cabecera (caja) */
+.caja {
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  color: #fff;
+  padding: 10px;
+}
+  
+  .titulo {
+    text-align: center;
+    font-size: 3rem;
+    flex: 1;
+  }
+  
+  .menu, .lupa {
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  .buscartx {
+    font-size: 1rem;
+    width: 150px;
+  }
+  .dropdown {
+    position: relative;
+    margin-right: 10px;
+  }
+  
+  .dropbtn {
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+    #grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      padding: 50px;
+    }  
+
+    /* Estilos para el contenido de la caja */
+.caja {
+  padding: 20px;
+  background-color: #292828;
+}
+
+/* Estilos para el menú desplegable */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #464d47;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.show {
+  display: block;
+}
+
+/* Estilos para el resto de elementos */
+.titulo {
+  font-size: 24px;
+  text-decoration: none;
+  margin-right: 10px;
+}
+.ofertas, .registrarse {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.buscartx {
+  padding: 8px;
+  font-size: 16px;
+}
+
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f1f1f1;
+}
+
+#contenedor_cocina {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 50px; /* Ajustamos el padding a 50px según la estructura inicial */
+}
+
+.grid-item {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  position: relative; /* Agregamos esta propiedad para que el elemento pueda tener contenido superpuesto */
+  overflow: hidden; /* Agregamos esta propiedad para ocultar contenido que sobrepase el tamaño del elemento */
+}
+
+.grid-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.grid-item-content {
+  padding: 15px;
+}
+
+.grid-item h3 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.grid-item p {
+  margin: 10px 0;
+  color: #666;
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+}
+/* Estilos del footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-links li:last-child {
+  margin-right: 0;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
