@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <link rel="stylesheet" href="./css/cocina.css">
 </head>
+
 <body>
     <div class="caja">
         <div class="dropdown">
@@ -18,30 +19,36 @@
                 <a href="./baño.html">Muebles Baño</a>
             </div>
         </div>
-      
-        <a href="./index.html" class="titulo">Muebles Shop</a>
+
+        <a href="./index.html" class="titulow">Muebles Shop</a>
         <button class="ofertas">Ofertas</button>
-        <button class="registrarse">Registrarse</button>
+        <button class="Carrito">Mi carrito</button>
         <input class="buscartx" type="text">
     </div>
 
-    <ul id="item-list">
-        <!-- Los elementos se agregarán aquí mediante JavaScript -->
-    </ul>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Resultados de búsqueda</h2>
+            <div id="modal-results" class="modal-results"></div>
+        </div>
+    </div>
 
-    <div id="contenedor_cocina"></div>
+    <div id="contenedor_cocina" class="grid-container"></div>
 
     <footer>
         <div class="footer-content">
-          <p>Mi tienda</p>
-          <ul class="footer-links">
-            <li><a href="#"></a>Autor: Juan Pablo</li>
-            <li><a href="#"></a></li>
-            <li><a href="#">Contacto</a></li>
-          </ul>
+            <p>Mi tienda</p>
+            <ul class="footer-links">
+                <li><a href="#"></a>Autor: Juan Pablo</li>
+                <li><a href="#"></a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
         </div>
-      </footer>
+    </footer>
 
     <script src="./js/cocina.js"></script>
 </body>
+
 </html>

@@ -3,13 +3,14 @@ html, body {
   height: 100%;
   margin: 0;
 }
+
 /* Estilos de la cabecera (caja) */
 .caja {
-display: flex;
-align-items: center;
-background-color: #000000;
-color: #fff;
-padding: 10px;
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  color: #fff;
+  padding: 10px;
 }
 
 .titulo {
@@ -26,7 +27,9 @@ padding: 10px;
 .buscartx {
   font-size: 1rem;
   width: 150px;
+  margin-left: 10px;
 }
+
 .dropdown {
   position: relative;
   margin-right: 10px;
@@ -36,6 +39,8 @@ padding: 10px;
   font-size: 2rem;
   background-color: transparent;
   border: none;
+  color: white;
+  cursor: pointer;
 }
 
 .dropdown-content {
@@ -54,83 +59,35 @@ padding: 10px;
   display: block;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-  #grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    padding: 50px;
-  }  
-
-  /* Estilos para el contenido de la caja */
-.caja {
-padding: 20px;
-background-color: #292828;
-}
-
-/* Estilos para el menú desplegable */
-.dropdown {
-position: relative;
-display: inline-block;
-}
-
-.dropbtn {
-background-color: #464d47;
-color: white;
-padding: 12px;
-font-size: 16px;
-border: none;
-cursor: pointer;
-}
-
-.dropdown-content {
-display: none;
-position: absolute;
-background-color: #f9f9f9;
-min-width: 160px;
-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-z-index: 1;
-}
-
-.dropdown-content a {
-color: black;
-padding: 12px 16px;
-text-decoration: none;
-display: block;
-}
-
 .dropdown-content a:hover {
-background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
 .show {
-display: block;
+  display: block;
 }
 
-/* Estilos para el resto de elementos */
-.titulo {
-font-size: 24px;
-text-decoration: none;
-margin-right: 10px;
+/* Estilos para el contenido de la caja */
+.caja {
+  padding: 20px;
+  background-color: #292828;
 }
+
+/* Estilos para el botón de ofertas y registrarse */
 .ofertas, .registrarse {
-padding: 10px 20px;
-font-size: 16px;
-background-color: #4CAF50;
-color: white;
-border: none;
-cursor: pointer;
-margin-right: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
 }
-.buscartx {
-padding: 8px;
-font-size: 16px;
-}
+
+/* Estilos para el contenido de contenedor_comedor */
 #contenedor_comedor {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
   padding: 50px;
 }
@@ -143,8 +100,6 @@ font-size: 16px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  position: relative;
-  overflow: hidden;
 }
 
 .grid-item img {
@@ -173,6 +128,7 @@ font-size: 16px;
 .grid-item:hover {
   transform: scale(1.05);
 }
+
 /* Estilos del footer */
 footer {
   background-color: #333;
@@ -211,4 +167,43 @@ footer {
 
 .footer-links a:hover {
   text-decoration: underline;
+}
+
+/* Media query para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+  .caja {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .titulo {
+      font-size: 2rem;
+  }
+
+  .buscartx {
+      margin-top: 10px;
+      width: 100%;
+  }
+
+  .dropdown {
+      margin-top: 10px;
+      margin-right: 0;
+  }
+
+  .dropbtn {
+      font-size: 1.5rem;
+  }
+
+  .dropdown-content {
+      top: 60px;
+  }
+
+  #contenedor_comedor {
+      grid-template-columns: 1fr;
+      padding: 10px;
+  }
+
+  .grid-item img {
+      height: 200px;
+  }
 }

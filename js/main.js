@@ -4,11 +4,14 @@ let datas = [
       Nombre : "Mesa",
       img: "https://i.ytimg.com/vi/gmVQGIeWUs0/maxresdefault.jpg",
       Categoria : "Comedor",
+      OtraCategoria: "Q: 200.00",  
+      
   },
   {
       Nombre : "Bancos",
       img: "https://cemacogt.vtexassets.com/arquivos/ids/453897-800-800?v=638233006614600000&width=800&height=800&aspect=true",
       Categoria : "Comedor",
+     
       
   },
   {
@@ -16,48 +19,50 @@ let datas = [
       Nombre : "Tinas",
       img: "https://www.mndelgolfo.com/blog/wp-content/uploads/2019/08/6.jpg",
       Categoria : "Baño",
-     
+      
   },
   {
      
       Nombre : "llaves",
       img: "https://cr.epaenlinea.com/media/catalog/product/0/3/037e6a3a-b621-4a72-be38-03ce0de67aff.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=300&width=300&canvas=300:300",
       Categoria : "Baño",
-     
+      
   },
   {
       Nombre : "Fluxometro",
       img: "https://vainsainnova.com.pe/358-large_default/fluxometro-mecanico-urinario-palanca-indirecto-vainsa.jpg",
       Categoria : "Baño",
-    
+      precio: ""
   },
   {
       Nombre : "asiento",
       img: "https://walmartgt.vtexassets.com/arquivos/ids/214891/Asiento-Yarden-Abierto-Para-Ba-o-1-37257.jpg?v=637710759164770000",
       Categoria : "Baño",
-      
+      precio: ""
   },
   {
       Nombre : "tarjetas",
       img: "",
       Categoria : "Baño",
-     
+      precio: ""
   },
   {
       Nombre : "regadera",
       img: "https://seir.com.gt/wp-content/uploads/2022/06/R-007.jpg",
       Categoria : "Baño",
-      
+      precio: ""
   },
   {
       Nombre : "Inodoro",
       img: "https://ferreteriavidri.com/images/items/large/88472.jpg",
       Categoria : "Baño",
+      precio: ""
   },
   {
       Nombre : "Mesa de centro",
       img: "https://blog.mueblesfiesta.com/hubfs/1-2.png",
       Categoria : "Sala",
+      precio: ""
   },
   {
       Nombre : "Sofá",
@@ -143,12 +148,14 @@ datas.forEach((producto) => {
     imgProducto.src = producto.img;
     imgProducto.alt = producto.Nombre;
     gridItem.appendChild(imgProducto);
-  
+    
     // Agregar la imagen pequeña en la parte inferior derecha del producto
     const imgPequena = document.createElement("img");
-    imgPequena.src = "https://img.freepik.com/vector-premium/icono-carrito-compras-rapido_414847-513.jpg?w=2000"; // Reemplaza "ruta_de_la_imagen_pequena.png" con la ruta de tu imagen pequeña
+    imgPequena.src =
+      "https://img.freepik.com/vector-premium/icono-carrito-compras-rapido_414847-513.jpg?w=2000"; // Ruta de la imagen del carrito
     imgPequena.classList.add("img-pequena");
     gridItem.appendChild(imgPequena);
+  
   
     // Agregar el nombre del producto
     const nombreProducto = document.createElement("h3");
@@ -159,6 +166,13 @@ datas.forEach((producto) => {
     const categoriaProducto = document.createElement("p");
     categoriaProducto.textContent = `Categoría: ${producto.Categoria}`;
     gridItem.appendChild(categoriaProducto);
+    
+    // Agregar la nueva categoría "OtraCategoria" si está disponible
+  if (producto.OtraCategoria) {
+    const otraCategoriaProducto = document.createElement("p");
+    otraCategoriaProducto.textContent = `Precio: ${producto.OtraCategoria}`;
+    gridItem.appendChild(otraCategoriaProducto);
+  }
   
     // Agregar el producto al contenedor principal
     const gridContainer = document.getElementById("grid-container");
@@ -229,10 +243,23 @@ datas.forEach((producto) => {
       categoriaProducto.textContent = `Categoría: ${producto.Categoria}`;
       gridItem.appendChild(categoriaProducto);
   
+      // Agregar la nueva categoría "OtraCategoria" si está disponible
+      if (producto.OtraCategoria) {
+        const otraCategoriaProducto = document.createElement("p");
+        otraCategoriaProducto.textContent = `Otra Categoría: ${producto.OtraCategoria}`;
+        gridItem.appendChild(otraCategoriaProducto);
+      }
+  
+      // Agregar el precio del producto si está disponible
+      if (producto.precio) {
+        const precioProducto = document.createElement("p");
+        precioProducto.textContent = `Precio: ${producto.precio}`;
+        gridItem.appendChild(precioProducto);
+      }
+  
       gridContainer.appendChild(gridItem);
     });
   }
-  
   // Función para mostrar la pantalla emergente con los resultados
   function mostrarResultadosModal(resultados) {
     const modal = document.getElementById("modal");
@@ -284,3 +311,14 @@ datas.forEach((producto) => {
       ocultarModal();
     }
   });
+
+  // Función para mostrar/ocultar el contenido del acordeón
+function toggleAccordion(accordionHeader) {
+  accordionHeader.classList.toggle("active");
+  var content = accordionHeader.nextElementSibling;
+  if (content.style.display === "block") {
+    content.style.display = "none";
+  } else {
+    content.style.display = "block";
+  }
+}

@@ -1,52 +1,97 @@
 // Tu data
 let data_comedor = [
     {
-      Nombre: "Mesa de comedor",
-      img: "https://static.wixstatic.com/media/a6a7fb_dfe29a381e354d3cb5a537ae30ee6a3b~mv2.jpg/v1/fill/w_640,h_388,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/a6a7fb_dfe29a381e354d3cb5a537ae30ee6a3b~mv2.jpg",
-      Categoria: "Comedor",
+      Nombre: "Cama grande",
+      img: "",
+      Categoria: "",
     },
     {
-      Nombre: "Silla de comedor",
-      img: "https://cdn.pacifiko.com/image/cache/catalog/p/MDI0MzE2ZD-484x484.jpg",
-      Categoria: "Comedor",
+      Nombre: "Cama individual",
+      img: "",
+      Categoria: "",
     },
     {
-        Nombre : "Mesa de comedor con tapa de cristal",
-        img: "Cómoda ",
-        Categoria : "",
-      },
-      {
-        Nombre : "Sillas de comedor tapizadas",
+        Nombre : "Cama Litera",
         img: "",
         Categoria : "",
       },
       {
-        Nombre : "Vitrina de cristal ",
+        Nombre : "Armario Grande",
         img: "",
         Categoria : "",
       },
       {
-        Nombre : "Sillones de comedor tapizados",
+        Nombre : "Armario pequeño",
         img: "",
         Categoria : "",
       },
       {
-        Nombre : "Cómoda ",
+        Nombre : "Armario mediano",
         img: "",
         Categoria : "",
       },
       {
-        Nombre : "",
+        Nombre : "Amplio Escritorio",
         img: "",
         Categoria : "",
       },
       {
-        Nombre : "",
+        Nombre : "Escritorio flotante",
         img: "",
         Categoria : "",
       },
       {
-        Nombre : "",
+        Nombre : "Escritorio minimalista",
+        img: "",
+        Categoria : "",
+      },
+      {
+        Nombre : "Repisas de madera rústica",
+        img: "",
+        Categoria : "",
+      },
+      {
+        Nombre : "Repisas de madera rústica",
+        img: "",
+        Categoria : "",
+      },
+      {
+        Nombre : "Repisas de madera rústica",
+        img: "",
+        Categoria : "",
+      },
+      {
+        Nombre : "Repisas de madera rústica",
+        img: "",
+        Categoria : "",
+      },
+      {
+        Nombre : "Repisas de madera rústica",
+        img: "",
+        Categoria : "",
+      },
+      {
+        Nombre : "Repisas de madera rústica",
+        img: "",
+        Categoria : "",
+      },
+      {
+        Nombre : "Repisas de madera rústica",
+        img: "",
+        Categoria : "",
+      },
+      {
+        Nombre : "Repisas de madera rústica",
+        img: "",
+        Categoria : "",
+      },
+      {
+        Nombre : "Repisas de madera rústica",
+        img: "",
+        Categoria : "",
+      },
+      {
+        Nombre : "Repisas de madera rústica",
         img: "",
         Categoria : "",
       },

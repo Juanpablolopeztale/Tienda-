@@ -1,87 +1,46 @@
 /* Estilos generales */
 html, body {
-    height: 100%;
-    margin: 0;
-  }
+  height: 100%;
+  margin: 0;
+}
+
 /* Estilos de la cabecera (caja) */
 .caja {
   display: flex;
   align-items: center;
-  background-color: #000000;
+  background-color: #fcfcfc;
   color: #fff;
   padding: 10px;
 }
-  
-  .titulo {
-    text-align: center;
-    font-size: 3rem;
-    flex: 1;
-  }
-  
-  .menu, .lupa {
-    font-size: 2rem;
-    cursor: pointer;
-  }
-  
-  .buscartx {
-    font-size: 1rem;
-    width: 150px;
-  }
-  .dropdown {
-    position: relative;
-    margin-right: 10px;
-  }
-  
-  .dropbtn {
-    font-size: 2rem;
-    background-color: transparent;
-    border: none;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-    #grid-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 20px;
-      padding: 50px;
-    }  
 
-    /* Estilos para el contenido de la caja */
-.caja {
-  padding: 20px;
-  background-color: #292828;
+.titulow {
+  text-align: center;
+  font-size: 3rem;
+  flex: 1;
+  
 }
 
-/* Estilos para el menú desplegable */
+.menu, .lupa {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.buscartx {
+  font-size: 1rem;
+  width: 150px;
+  margin-left: 10px;
+}
+
 .dropdown {
   position: relative;
-  display: inline-block;
+  margin-right: 10px;
 }
 
 .dropbtn {
-  background-color: #464d47;
-  color: white;
-  padding: 12px;
-  font-size: 16px;
+  font-size: 2rem;
+  background-color: transparent;
   border: none;
+  color: white;
   cursor: pointer;
 }
 
@@ -90,7 +49,7 @@ html, body {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -109,38 +68,158 @@ html, body {
   display: block;
 }
 
-/* Estilos para el resto de elementos */
-.titulo {
-  font-size: 24px;
-  text-decoration: none;
-  margin-right: 10px;
+/* Estilo para el contenido de la caja */
+.caja {
+  padding: 20px;
+  background-color: #292828;
 }
-.ofertas, .registrarse {
-  padding: 10px 20px;
+
+/* Estilos para el botón de ofertas */
+.ofertas {
+  padding: 5px 10px;
   font-size: 16px;
   background-color: #4CAF50;
   color: white;
   border: none;
   cursor: pointer;
-  margin-right: 10px;
 }
-.buscartx {
-  padding: 8px;
+
+/* Estilos para el enlace del carrito */
+.Carrito {
+  padding: 5px 10px;
   font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
 }
 
+.Carrito:hover {
+  background-color: #4CAF50;
+}
+
+/* Estilos para el contenido de contenedor_cocina */
+.contenedor_cocina {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+  min-height: calc(100vh - 140px); /* Ajustar el valor según el tamaño de la cabecera y el pie de página */
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+  .caja {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  .titulo {
+      font-size: 2rem;
+  }
+
+  .buscartx {
+      margin-top: 10px;
+      width: 100%;
+  }
+
+  .dropdown {
+      margin-top: 10px;
+      margin-right: 0;
+  }
+
+  .dropbtn {
+      font-size: 1.5rem;
+  }
+
+  .dropdown-content {
+      top: 60px;
+  }
+
+  .contenedor_cocina {
+      grid-template-columns: 1fr;
+      padding: 10px;
+  }
+}
+
+/* Estilo para la pantalla emergente */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Estilos para los resultados en la pantalla emergente */
+#modal-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.producto {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+}
+
+.producto img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.producto h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.producto p {
+  font-size: 14px;
+  color: #666;
+}
+  
 /* styles.css */
-body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-  background-color: #f1f1f1;
-}
-
 #contenedor_cocina {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
-  padding: 50px; /* Ajustamos el padding a 50px según la estructura inicial */
+  padding: px; /* Ajustamos el padding a 50px según la estructura inicial */
 }
 
 .grid-item {
@@ -220,4 +299,3 @@ footer {
 .footer-links a:hover {
   text-decoration: underline;
 }
-

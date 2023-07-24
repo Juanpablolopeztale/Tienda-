@@ -4,32 +4,29 @@
   <title>Mi tienda</title>
   <link rel="stylesheet" type="text/css" href="./css/index.css">
   <link rel="stylesheet" href="./css/config.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
 
   <div class="caja">
-    
-      <div class="dropdown">
-        <button onclick="toggleDropdown()" class="dropbtn">Menú ☰</button>
-          <div id="myDropdown" class="dropdown-content">
-            <a href="./cocina.html">Muebles Cocina</a>
-            <a href="./Comedor.html">Comedor</a>
-            <a href="./sala.html">Muebles Sala</a>
-            <a href="./baño.html">Muebles Baño</a>
-        </div>
+    <div class="dropdown">
+      <button onclick="toggleDropdown()" class="dropbtn">Menú ☰</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="./cocina.html">Cocina - Comedor</a>
+        <a href="./Comedor.html">Dormitorio</a>
+        <a href="./sala.html">Muebles</a>
+        <a href="./baño.html">Muebles</a>
       </div>
-    
-    <h1 class="titulo"> Muebles shop</h1>
+    </div>
+    <h1 class="titulo">"Hogar y Estilo"</h1>
     <button class="ofertas">Ofertas</button>
     <a href="./carrito.html"><button class="carrito">Mi carrito</button></a>
     <input class="buscartx" type="text">
   </div>
 
   <div class="caja2">
-    <h1 class="principal">Producto</h1>
-    <p class="info">Informacion de manera resumida del Producto</p>
-    <img class="img1" src="https://www.mueblesbonitos.com/media/social_muebles_bonitos.jpg" alt="">
-    <button class="comprar1">comprar</button>
+    <h1 class="principal"> "Transforma tu hogar con encanto: ¡Descubre nuestra venta de muebles únicos y elegantes!"</h1>
+    <p class="info">¡Bienvenido a nuestra venta de muebles, donde tus sueños de un hogar hermoso y acogedor se hacen realidad! Entra en un mundo lleno de inspiración y crea espacios llenos de encanto y estilo. Nuestra selección de muebles ha sido cuidadosamente curada para complacer todos los gustos y necesidades, desde lo clásico hasta lo moderno, desde lo funcional hasta lo excepcional.</p>
   </div>
 
   <div id="grid-container"></div>
@@ -53,6 +50,6 @@
   </footer>
 
   <script src="./js/main.js"></script>
-  <script src="./js/data.js"></script>
+  <script src="./js/accordion.js"></script>
 </body>
 </html>

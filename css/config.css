@@ -12,6 +12,10 @@ html, body {
   padding: 10px;
 }
 
+.img1{
+  height: 250px;
+}
+
 .titulo {
   text-align: center;
   font-size: 3rem;
@@ -27,86 +31,75 @@ html, body {
   font-size: 1rem;
   width: 150px;
 }
-.dropdown {
-  position: relative;
-  margin-right: 10px;
+
+/* Estilos para el contenido de la caja */
+.caja {
+padding: 20px;
+background-color: #292828;
 }
 
+/* Estilos para el botón del menú */
+/* Estilos para la caja del menú */
+.caja {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+/* Estilos para el botón del menú */
 .dropbtn {
-  font-size: 2rem;
+  font-size: 1.6rem;
   background-color: transparent;
   border: none;
+  cursor: pointer;
+  color: #fff;
+  margin-right: 20px;
 }
 
+/* Estilos para el contenedor del menú desplegable */
+.dropdown {
+  position: relative;
+}
+
+/* Estilos para el menú desplegable */
 .dropdown-content {
   display: none;
   position: absolute;
+  top: 100%;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
+/* Estilos para los enlaces dentro del menú desplegable */
 .dropdown-content a {
-  color: black;
+  color: #333;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
+/* Cambiar el color del enlace cuando se pasa el ratón por encima */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: #333;
+}
+
+/* Mostrar el menú desplegable cuando se pasa el ratón por encima del botón */
 .dropdown:hover .dropdown-content {
   display: block;
 }
-  #grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    padding: 50px;
-  }  
 
-  /* Estilos para el contenido de la caja */
-.caja {
-padding: 20px;
-background-color: #292828;
-}
-
-/* Estilos para el menú desplegable */
-.dropdown {
-position: relative;
-display: inline-block;
-}
-
-.dropbtn {
-background-color: #464d47;
-color: white;
-padding: 12px;
-font-size: 16px;
-border: none;
-cursor: pointer;
-}
-
-.dropdown-content {
-display: none;
-position: absolute;
-background-color: #f9f9f9;
-min-width: 160px;
-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-z-index: 1;
-}
-
-.dropdown-content a {
-color: black;
-padding: 12px 16px;
-text-decoration: none;
-display: block;
-}
-
-.dropdown-content a:hover {
-background-color: #f1f1f1;
-}
-
-.show {
-display: block;
+/* Estilos para el resto de elementos del menú */
+.titulo {
+  text-align: center;
+  font-size: 24px;
+  text-decoration: none;
+  flex: 1;
+  
 }
 
 /* Estilos para el resto de elementos */
@@ -116,7 +109,7 @@ text-decoration: none;
 margin-right: 10px;
 }
 .ofertas, .carrito {
-padding: 10px 20px;
+padding: 8px 13px;
 font-size: 16px;
 background-color: #4CAF50;
 color: white;
